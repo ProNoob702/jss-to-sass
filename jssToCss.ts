@@ -42,7 +42,7 @@ const camelCaseToCssProp = (key: string, style: JSONValue) => {
 };
 
 // normally if it's a style object one key give an idea about other keys directly
-const isLastNest = (objectOrVal: any) => {
+const isLastNest = (objectOrVal: JSONObject) => {
   let status = true;
   if (!doesValObject(objectOrVal)) return true;
   Object.keys(objectOrVal).forEach((k) => {
